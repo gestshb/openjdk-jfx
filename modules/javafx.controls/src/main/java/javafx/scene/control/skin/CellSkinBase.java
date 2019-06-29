@@ -163,7 +163,7 @@ public class CellSkinBase<C extends Cell> extends LabeledSkinBase<C> {
             @Override
             public boolean isSettable(Cell<?> n) {
                 final CellSkinBase<?> skin = (CellSkinBase<?>) n.getSkin();
-                return skin.cellSize == null || !skin.cellSize.isBound();
+                return skin == null || skin.cellSize == null || !skin.cellSize.isBound();
             }
 
             @Override
